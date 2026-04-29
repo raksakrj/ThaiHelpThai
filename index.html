@@ -10,27 +10,24 @@
             margin: 0;
             padding: 0;
             font-family: 'Kanit', sans-serif;
+            /* ปรับสีพื้นหลังเป็นสีขาวนวลอมเขียว ให้ดู Balance กับภาพวิว */
+            background-color: #F8FDF9; 
         }
 
-        /* ส่วนหัว: ปรับให้แคบลงและสมดุลกับเนื้อหาด้านใน */
+        /* ส่วนหัวที่รักษ์พอใจแล้ว */
         .top-header {
             background: linear-gradient(rgba(255,255,255,0.3), rgba(255,255,255,0.3)), 
                         url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1500&q=80');
             background-size: cover;
             background-position: center;
-            
-            /* ลด Padding ให้เหลือแค่ 10px บน-ล่าง เพื่อความ Balance */
             padding: 10px 40px; 
-            
-            /* ไม่กำหนด min-height เพื่อให้ความสูงขยับตามรูปภาพ */
             display: flex;
             align-items: center; 
             justify-content: flex-start; 
             gap: 40px; 
-            border-bottom: 3px solid #52b788;
+            border-bottom: 3px solid #52b788; /* เส้นขอบสีเขียวช่วยแบ่งส่วนให้ชัดเจน */
         }
 
-        /* โลโก้ขนาด 400px ที่รักษ์โอเคแล้ว */
         .logo-img {
             width: 400px;
             height: auto;
@@ -38,7 +35,6 @@
             filter: drop-shadow(0 5px 10px rgba(0,0,0,0.1));
         }
 
-        /* ข้อความต้อนรับ */
         .welcome-text {
             color: #1b4332;
             text-align: left;
@@ -58,7 +54,25 @@
             line-height: 1.2;
         }
 
-        /* สำหรับมือถือ */
+        /* ส่วนเนื้อหาด้านล่าง (ลองใส่ตัวอย่างให้ดูความเข้ากันของสีครับ) */
+        .content-area {
+            padding: 60px 40px;
+            text-align: center;
+        }
+
+        .content-area h2 {
+            color: #2d6a4f;
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+        }
+
+        .content-area p {
+            color: #444;
+            font-size: 1.3rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
         @media (max-width: 900px) {
             .top-header {
                 flex-direction: column;
@@ -81,6 +95,11 @@
             <p>จากมือผู้ผลิต สู่ใจผู้บริโภค<br>โดยไม่ผ่านคนกลาง</p>
         </div>
     </header>
+
+    <main class="content-area">
+        <h2>พื้นที่แห่งการแบ่งปันและสนับสนุนผู้ผลิตไทย</h2>
+        <p>เราตั้งใจสร้างพื้นที่นี้ขึ้นมาเพื่อให้ผู้บริโภคได้เข้าถึงสินค้าคุณภาพจากมือผู้ผลิตโดยตรง เพื่อสร้างรอยยิ้มให้กับทั้งคนปลูกและคนกินครับ</p>
+    </main>
 
 </body>
 </html>
