@@ -3,85 +3,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ไทยช่วยไทย | Thai Help Thai</title>
+    <title>ไทยช่วยไทย | Thai Help Thai Premium</title>
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         body {
             margin: 0;
             padding: 0;
             font-family: 'Kanit', sans-serif;
-            /* ปรับสีพื้นหลังเป็นสีขาวนวลอมเขียว ให้ดู Balance กับภาพวิว */
-            background-color: #F8FDF9; 
+            /* เปลี่ยนพื้นหลังเป็นสีเขียวเข้มลึก ช่วยให้ดูหรูและแพงขึ้น */
+            background-color: #0d1b15; 
+            color: #e0e0e0;
         }
 
-        /* ส่วนหัวที่รักษ์พอใจแล้ว */
+        /* ส่วนหัว: ปรับให้มืดและดูมีมิติ */
         .top-header {
-            background: linear-gradient(rgba(255,255,255,0.3), rgba(255,255,255,0.3)), 
+            background: linear-gradient(rgba(13, 27, 21, 0.6), rgba(13, 27, 21, 0.6)), 
                         url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1500&q=80');
             background-size: cover;
             background-position: center;
-            padding: 10px 40px; 
+            padding: 15px 40px; 
             display: flex;
             align-items: center; 
             justify-content: flex-start; 
             gap: 40px; 
-            border-bottom: 3px solid #52b788; /* เส้นขอบสีเขียวช่วยแบ่งส่วนให้ชัดเจน */
+            border-bottom: 1px solid #2d6a4f; /* เส้นขอบบางๆ สีเขียวเข้ม */
         }
 
         .logo-img {
             width: 400px;
             height: auto;
             display: block;
-            filter: drop-shadow(0 5px 10px rgba(0,0,0,0.1));
+            /* เพิ่มเงาให้โลโก้ดูนูนออกมา */
+            filter: drop-shadow(0 10px 30px rgba(0,0,0,0.5));
         }
 
         .welcome-text {
-            color: #1b4332;
             text-align: left;
         }
 
         .welcome-text h1 {
-            font-size: 2.8rem;
+            font-size: 3rem;
             margin: 0;
-            color: #2d6a4f;
-            text-shadow: 1px 1px 2px rgba(255,255,255,0.8);
+            /* ใช้สีทองจางๆ เพื่อความหรูหรา */
+            color: #d4af37; 
+            letter-spacing: 1px;
         }
 
         .welcome-text p {
-            font-size: 1.5rem;
+            font-size: 1.6rem;
             margin: 5px 0 0 0;
-            color: #333;
-            line-height: 1.2;
+            color: #b7e4c7; /* สีเขียวอ่อนแบบนวลตา */
+            line-height: 1.3;
+            font-weight: 300;
         }
 
-        /* ส่วนเนื้อหาด้านล่าง (ลองใส่ตัวอย่างให้ดูความเข้ากันของสีครับ) */
+        /* ส่วนเนื้อหาที่ดูพรีเมียม */
         .content-area {
-            padding: 60px 40px;
+            padding: 100px 40px;
             text-align: center;
+            background: radial-gradient(circle at center, #1a3027 0%, #0d1b15 100%);
         }
 
         .content-area h2 {
-            color: #2d6a4f;
-            font-size: 2.2rem;
-            margin-bottom: 20px;
+            color: #d4af37;
+            font-size: 2.5rem;
+            margin-bottom: 25px;
+            font-weight: 400;
         }
 
         .content-area p {
-            color: #444;
-            font-size: 1.3rem;
-            max-width: 800px;
+            color: #95d5b2;
+            font-size: 1.4rem;
+            max-width: 850px;
             margin: 0 auto;
+            line-height: 1.8;
+            letter-spacing: 0.5px;
         }
 
         @media (max-width: 900px) {
             .top-header {
                 flex-direction: column;
                 text-align: center;
-                padding: 20px;
-                gap: 20px;
+                padding: 30px 20px;
             }
-            .logo-img { width: 280px; }
-            .welcome-text h1 { font-size: 2rem; }
+            .logo-img { width: 300px; }
+            .welcome-text h1 { font-size: 2.2rem; }
         }
     </style>
 </head>
@@ -97,8 +103,8 @@
     </header>
 
     <main class="content-area">
-        <h2>พื้นที่แห่งการแบ่งปันและสนับสนุนผู้ผลิตไทย</h2>
-        <p>เราตั้งใจสร้างพื้นที่นี้ขึ้นมาเพื่อให้ผู้บริโภคได้เข้าถึงสินค้าคุณภาพจากมือผู้ผลิตโดยตรง เพื่อสร้างรอยยิ้มให้กับทั้งคนปลูกและคนกินครับ</p>
+        <h2>เอกลักษณ์แห่งผลผลิตไทย</h2>
+        <p>สัมผัสคุณค่าจากแหล่งกำเนิดที่แท้จริง เราคัดสรรสิ่งที่ดีที่สุดจากมือเกษตรกรไทย <br> ส่งตรงถึงคุณด้วยความใส่ใจและความโปร่งใสในทุกขั้นตอน</p>
     </main>
 
 </body>
