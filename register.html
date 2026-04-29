@@ -1,34 +1,25 @@
-<!DOCTYPE html>
-<html lang="th">
-<head>
-    <meta charset="UTF-8">
-    <title>สมัครสมาชิก | ไทยช่วยไทย</title>
-    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600&display=swap" rel="stylesheet">
-    <style>
-        body { font-family: 'Kanit', sans-serif; background-color: #f0f7f4; display: flex; justify-content: center; padding: 50px; }
-        .reg-card { background: white; padding: 30px; border-radius: 20px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); width: 400px; text-align: center; }
-        .preview-img { width: 100px; height: 100px; border-radius: 50%; object-fit: cover; border: 3px solid #2d6a4f; margin-bottom: 10px; }
-        .form-group { text-align: left; margin-bottom: 15px; }
-        input { width: 100%; padding: 10px; border-radius: 8px; border: 1px solid #ccc; box-sizing: border-box; }
-        .btn-submit { background: #1b4332; color: white; border: none; width: 100%; padding: 15px; border-radius: 50px; cursor: pointer; font-weight: 600; }
-    </style>
-</head>
-<body>
-<div class="reg-card">
-    <img src="https://via.placeholder.com/100" id="v-img" class="preview-img">
-    <div id="v-name" style="color:#2d6a4f; font-weight:600; margin-bottom:20px;">ชื่อหน้าโปรไฟล์ของคุณ</div>
-    <form>
-        <div class="form-group"><label>รูปโปรไฟล์</label><input type="file" onchange="pImg(event)"></div>
-        <div class="form-group"><label>ชื่อ-นามสกุล</label><input type="text"></div>
-        <div class="form-group"><label>ชื่อหน้าโปรไฟล์</label><input type="text" id="i-name" onkeyup="uName()" placeholder="โชว์หน้าร้าน"></div>
-        <div class="form-group"><label>อีเมล (รับ OTP)</label><input type="email"></div>
-        <div class="form-group"><label>รหัสผ่าน</label><input type="password"></div>
-        <button type="button" class="btn-submit">ยืนยันสมัครสมาชิก</button>
-    </form>
+<div class="form-group">
+    <label>ตั้งรหัสผ่าน</label>
+    <input type="password" id="p1" placeholder="รหัสผ่าน">
 </div>
+<div class="form-group">
+    <label>ยืนยันรหัสผ่านอีกครั้ง</label>
+    <input type="password" id="p2" placeholder="พิมพ์รหัสผ่านเดิมอีกครั้ง">
+</div>
+
+<button type="button" class="btn-submit" onclick="checkPass()">ยืนยันสมัครสมาชิก</button>
+
 <script>
-    function pImg(e){ var r=new FileReader(); r.onload=function(){document.getElementById('v-img').src=r.result;}; r.readAsDataURL(e.target.files[0]); }
-    function uName(){ document.getElementById('v-name').innerText=document.getElementById('i-name').value || "ชื่อหน้าโปรไฟล์ของคุณ"; }
+    function checkPass() {
+        var p1 = document.getElementById('p1').value;
+        var p2 = document.getElementById('p2').value;
+        if (p1 != p2) {
+            alert("รหัสผ่านไม่ตรงกัน กรุณาตรวจสอบอีกครั้งครับคุณรักษ์");
+        } else if (p1 == "") {
+            alert("กรุณาตั้งรหัสผ่านด้วยครับ");
+        } else {
+            alert("รหัสผ่านตรงกัน เรียบร้อยครับ!");
+            // ตรงนี้อนาคตเราจะสั่งให้บันทึกข้อมูลลงระบบครับ
+        }
+    }
 </script>
-</body>
-</html>
