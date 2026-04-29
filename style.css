@@ -46,38 +46,25 @@ body {
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 /* --------------------------------------------
-   STYLE: TOP HEADER LAYOUT (ปรับเลย์เอาต์ส่วนหัว)
-   -------------------------------------------- */
-.top-header {
-    display: flex;
-    justify-content: space-between; /* ดันโลโก้ไว้ซ้าย ดันปุ่มไว้ขวา */
-    align-items: flex-start; /* ให้ปุ่มอยู่ชิดขอบบน */
-    padding: 20px 40px;
-    background: linear-gradient(rgba(255,255,255,0.2), rgba(255,255,255,0.2)), 
-                url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1500&q=80');
-    background-size: cover;
-    background-position: center;
-}
-
-/* --------------------------------------------
-   STYLE: MODERN BUTTONS (ปุ่มกดแบบหรูหราสะดุดตา)
+   STYLE: MEMBER BUTTONS (ปรับโทนสีให้เหมือนกัน - เน้นเขียวโครงการ)
    -------------------------------------------- */
 .member-corner {
     display: flex;
     gap: 15px;
-    margin-top: 10px; /* เว้นระยะจากขอบบนนิดหน่อย */
+    margin-top: 10px;
 }
 
-/* ปุ่มเข้าสู่ระบบ: เน้นความคลีนแต่ดูแพง */
+/* ปุ่มเข้าสู่ระบบ: เน้นความคลีน สีเขียวเข้ม */
 .btn-login-modern {
-    background-color: white;
+    background: white;
     color: #1b4332;
     border: 2px solid #1b4332;
     padding: 10px 25px;
     border-radius: 50px;
     font-weight: 600;
+    font-family: 'Kanit';
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: 0.3s;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
@@ -86,23 +73,23 @@ body {
     transform: translateY(-2px);
 }
 
-/* ปุ่มสมัครสมาชิก: สีส้มทองสว่างสะดุดตา (Highlight) */
+/* ปุ่มสมัครสมาชิก: ใช้สีเขียวเข้มของโครงการ (ไม่เอาสีส้มแล้ว) */
 .btn-reg-modern {
-    background: linear-gradient(135deg, #f59e0b, #d97706); /* ไล่เฉดสีส้มทอง */
+    background: linear-gradient(135deg, #2d6a4f, #1b4332); /* ไล่เฉดเขียวเข้มดูหรู */
     color: white;
     border: none;
     padding: 12px 30px;
     border-radius: 50px;
     font-weight: 600;
     font-size: 1.1rem;
+    font-family: 'Kanit';
     cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0 6px 15px rgba(217, 119, 6, 0.4); /* เงาสีส้มให้นูนออกมา */
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+    box-shadow: 0 6px 15px rgba(27, 67, 50, 0.4); /* เงาสีเขียวเข้มให้นูนเด่น */
+    transition: 0.3s;
 }
 
 .btn-reg-modern:hover {
-    background: linear-gradient(135deg, #fbbf24, #f59e0b);
-    transform: translateY(-3px); /* เวลากดจะดูเหมือนปุ่มลอยขึ้น */
-    box-shadow: 0 8px 20px rgba(217, 119, 6, 0.5);
+    background: linear-gradient(135deg, #40916c, #2d6a4f); /* เวลาเอาเมาส์วางจะสว่างขึ้นนิดนึง */
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(27, 67, 50, 0.6);
 }
