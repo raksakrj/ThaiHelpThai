@@ -20,16 +20,24 @@
             justify-content: space-between; 
             align-items: center; 
             border-bottom: 3px solid #52b788;
+            flex-wrap: wrap; /* เพิ่มเพื่อให้รองรับโลโก้ขนาดใหญ่มาก */
         }
 
-        .header-left { display: flex; align-items: center; }
-        /* ปรับโลโก้ให้ใหญ่ขึ้นตามที่รักษ์ต้องการ */
-        .logo-img { width: 800px; height: auto; margin-right: 25px; filter: drop-shadow(0 5px 10px rgba(0,0,0,0.1)); }
+        .header-left { display: flex; align-items: center; flex: 1; }
+        
+        
+        /* ปรับโลโก้ให้ใหญ่ 800px ตามที่รักษ์ต้องการ และสั่งไม่ให้โดนบีบ (flex-shrink: 0) */
+        .logo-img { 
+            width: 800px !important; 
+            height: auto; 
+            margin-right: 25px; 
+            flex-shrink: 0; 
+            filter: drop-shadow(0 5px 10px rgba(0,0,0,0.1)); 
+        }
         
         .welcome-text h1 { font-size: 2.5rem; margin: 0; color: #2d6a4f; }
         .welcome-text p { font-size: 1.1rem; margin: 5px 0; color: #333; }
 
-        /* ส่วนแสดงวันที่และเวลา ใต้ข้อความไทยช่วยไทย */
         .date-time-box { font-size: 1rem; color: #1b4332; font-weight: 500; margin-top: 5px; }
 
         .header-right { text-align: right; align-self: flex-start; }
@@ -50,7 +58,6 @@
         }
         .btn-thai-style:hover { background: #2d6a4f; transform: translateY(-2px); }
 
-        /* แถบเมนูไอคอน 6 ปุ่ม */
         .main-nav { background: #2d6a4f; padding: 15px 0; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
         .nav-container { display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; }
         .nav-item { color: white; text-decoration: none; display: flex; flex-direction: column; align-items: center; gap: 8px; transition: 0.3s; }
