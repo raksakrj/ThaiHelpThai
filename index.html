@@ -7,6 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600&display=swap" rel="stylesheet">
     
     <style>
+        /* โครงสร้างหลัก */
         body { margin: 0; padding: 0; font-family: 'Kanit', sans-serif; background-color: #f0f7f4; }
 
         .top-header {
@@ -38,31 +39,16 @@
         }
 
         /* --------------------------------------------
-           STYLE: ALL GREEN BUTTONS (บังคับเขียวทั้งคู่)
+           ปุ่มเขียวทึบคู่ (บังคับสีเดียวกันเป๊ะ)
            -------------------------------------------- */
         .member-corner {
             display: flex;
             gap: 15px;
-            margin-top: 10px;
+            margin-top: 15px;
         }
 
-        /* ปุ่มเข้าสู่ระบบ: บังคับขอบเขียว ตัวหนังสือเขียว */
-        .btn-green-outline {
-            background: white !important;
-            color: #1b4332 !important;
-            border: 2px solid #1b4332 !important;
-            padding: 10px 25px;
-            border-radius: 50px;
-            font-weight: 600;
-            font-family: 'Kanit';
-            cursor: pointer;
-            transition: 0.3s;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-        }
-
-        /* ปุ่มสมัครสมาชิก: บังคับเขียวเข้มไล่เฉด */
-        .btn-green-main {
-            background: linear-gradient(135deg, #2d6a4f, #1b4332) !important;
+        .btn-thai-style {
+            background: #1b4332 !important; /* เขียวเข้มทึบโครงการ */
             color: white !important;
             border: none !important;
             padding: 12px 30px;
@@ -71,13 +57,14 @@
             font-size: 1.1rem;
             font-family: 'Kanit';
             cursor: pointer;
-            box-shadow: 0 6px 15px rgba(27, 67, 50, 0.4);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
             transition: 0.3s;
         }
 
-        .btn-green-main:hover {
+        .btn-thai-style:hover {
+            background: #2d6a4f !important;
             transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(27, 67, 50, 0.6);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
         }
     </style>
 </head>
@@ -95,8 +82,8 @@
         </div>
 
         <div class="member-corner">
-            <button class="btn-green-outline">เข้าสู่ระบบ</button>
-            <button class="btn-green-main">สมัครสมาชิก</button>
+            <button class="btn-thai-style">เข้าสู่ระบบ</button>
+            <button class="btn-thai-style">สมัครสมาชิก</button>
         </div>
     </header>
 
