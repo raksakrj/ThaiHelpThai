@@ -1,106 +1,11 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
-    <head>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header class="top-header">
-        <img src="logo.png" class="logo-img">
-        <div class="welcome-text">
-            <h1>ยินดีต้อนรับสู่ไทยช่วยไทย</h1>
-            <p>จากมือผู้ผลิต สู่ใจผู้บริโภค<br>โดยไม่ผ่านคนกลาง</p>
-        </div>
-    </header>
-
-    <div class="btn-container">
-        <button class="btn-register">สมัครสมาชิกกลุ่ม</button>
-    </div>
-</body>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ไทยช่วยไทย | Thai Help Thai</title>
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600&display=swap" rel="stylesheet">
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: 'Kanit', sans-serif;
-            /* พื้นที่ด้านล่างปรับเป็นสีเขียวมะนาวอ่อนๆ ตามสั่งครับ */
-            background-color: #F2F9E1; 
-        }
-
-        /* ส่วนหัวที่รักษ์พอใจแล้ว (Balance & Soft) */
-        .top-header {
-            background: linear-gradient(rgba(255,255,255,0.2), rgba(255,255,255,0.2)), 
-                        url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1500&q=80');
-            background-size: cover;
-            background-position: center;
-            padding: 10px 40px; 
-            display: flex;
-            align-items: center; 
-            justify-content: flex-start; 
-            gap: 40px; 
-            border-bottom: 2px solid #D4E157; /* เส้นขอบสีมะนาวที่เข้มขึ้นนิดนึง */
-        }
-
-        .logo-img {
-            width: 400px;
-            height: auto;
-            display: block;
-            filter: drop-shadow(0 5px 15px rgba(0,0,0,0.08));
-        }
-
-        .welcome-text {
-            color: #1b4332;
-            text-align: left;
-        }
-
-        .welcome-text h1 {
-            font-size: 2.8rem;
-            margin: 0;
-            color: #2d6a4f;
-            text-shadow: 1px 1px 2px rgba(255,255,255,0.8);
-        }
-
-        .welcome-text p {
-            font-size: 1.5rem;
-            margin: 5px 0 0 0;
-            color: #444;
-            line-height: 1.2;
-        }
-
-        /* ส่วนเนื้อหาในโทนสีมะนาวหรู */
-        .content-area {
-            padding: 80px 40px;
-            text-align: center;
-        }
-
-        .content-area h2 {
-            color: #33691E; /* สีเขียวเข้มแบบใบไม้เพื่อให้ตัดกับพื้นมะนาว */
-            font-size: 2.4rem;
-            margin-bottom: 25px;
-            font-weight: 600;
-        }
-
-        .content-area p {
-            color: #558B2F;
-            font-size: 1.4rem;
-            max-width: 850px;
-            margin: 0 auto;
-            line-height: 1.8;
-        }
-
-        @media (max-width: 900px) {
-            .top-header {
-                flex-direction: column;
-                text-align: center;
-                padding: 20px;
-            }
-            .logo-img { width: 300px; }
-            .welcome-text h1 { font-size: 2rem; }
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -110,13 +15,13 @@
         <div class="welcome-text">
             <h1>ยินดีต้อนรับสู่ไทยช่วยไทย</h1>
             <p>จากมือผู้ผลิต สู่ใจผู้บริโภค<br>โดยไม่ผ่านคนกลาง</p>
+            
+            <div id="live-clock" class="clock-style">
+                <span id="date"></span> | <span id="time"></span>
+            </div>
         </div>
     </header>
 
-    <main class="content-area">
-        <h2>คุณค่าที่ส่งตรงจากไร่ถึงมือคุณ</h2>
-        <p>เราเชื่อในพลังของเกษตรกรไทย และความจริงใจในการผลิต <br> ทุกชิ้นคือความภูมิใจที่อยากให้คุณได้สัมผัสด้วยตัวเอง</p>
-    </main>
-
+    <script src="script.js"></script>
 </body>
 </html>
