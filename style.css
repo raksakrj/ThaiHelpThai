@@ -45,3 +45,57 @@ body {
     font-weight: 600; 
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
+/* --------------------------------------------
+   STYLE: MEMBER BUTTONS (การตกแต่งปุ่มสมาชิกมุมขวา)
+   -------------------------------------------- */
+.member-actions {
+    margin-left: auto; /* ดันปุ่มไปทางขวาสุด */
+    display: flex;
+    gap: 15px;
+}
+
+/* ปุ่มเข้าสู่ระบบ - เน้นเรียบหรู */
+.btn-login {
+    background-color: transparent;
+    color: #1b4332;
+    border: 2px solid #1b4332;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-family: 'Kanit', sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-login:hover {
+    background-color: #1b4332;
+    color: white;
+}
+
+/* ปุ่มสมัครสมาชิก - เน้นสีเด่นเห็นชัด */
+.btn-register {
+    background-color: #d97706; /* สีส้มทองเด่นชัด */
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 25px;
+    font-family: 'Kanit', sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(217, 119, 6, 0.3);
+    transition: 0.3s;
+}
+
+.btn-register:hover {
+    background-color: #b45309;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(217, 119, 6, 0.4);
+}
+
+/* ปรับแต่งสำหรับมือถือ */
+@media (max-width: 900px) {
+    .member-actions {
+        margin: 20px 0 0 0;
+        justify-content: center;
+    }
+}
