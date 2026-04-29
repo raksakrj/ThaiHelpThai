@@ -23,35 +23,30 @@
         }
 
         .header-left { display: flex; align-items: center; }
-        .logo-img { width: 80px; height: auto; margin-right: 20px; filter: drop-shadow(0 5px 10px rgba(0,0,0,0.1)); }
+        /* ปรับโลโก้ให้ใหญ่ขึ้นตามที่รักษ์ต้องการ */
+        .logo-img { width: 150px; height: auto; margin-right: 25px; filter: drop-shadow(0 5px 10px rgba(0,0,0,0.1)); }
         
-        .welcome-text h1 { font-size: 2rem; margin: 0; color: #2d6a4f; }
-        .welcome-text p { font-size: 1rem; margin: 5px 0 0 0; color: #333; }
+        .welcome-text h1 { font-size: 2.5rem; margin: 0; color: #2d6a4f; }
+        .welcome-text p { font-size: 1.1rem; margin: 5px 0; color: #333; }
 
-        .header-right { text-align: right; }
-        .clock-style { 
-            background: rgba(45, 106, 79, 0.9); 
-            padding: 8px 20px; 
-            border-radius: 30px; 
-            display: inline-block; 
-            font-weight: 600; 
-            color: white; 
-            margin-bottom: 10px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-            font-size: 1rem; /* ปรับขนาดให้พอดีกับวันที่ */
-        }
+        /* ส่วนแสดงวันที่และเวลา ใต้ข้อความไทยช่วยไทย */
+        .date-time-box { font-size: 1rem; color: #1b4332; font-weight: 500; margin-top: 5px; }
 
-        .member-corner { display: flex; gap: 10px; justify-content: flex-end; }
+        .header-right { text-align: right; align-self: flex-start; }
+        
+        .member-corner { display: flex; gap: 10px; justify-content: flex-end; margin-top: 10px; }
         .btn-thai-style { 
             background: #1b4332; 
             color: white; 
             border: none; 
-            padding: 8px 18px; 
+            padding: 10px 20px; 
             border-radius: 50px; 
             font-weight: 600; 
             cursor: pointer; 
             transition: 0.3s;
-            font-size: 0.9rem;
+            font-size: 0.95rem;
+            text-decoration: none;
+            display: inline-block;
         }
         .btn-thai-style:hover { background: #2d6a4f; transform: translateY(-2px); }
 
@@ -64,7 +59,6 @@
         .nav-item:hover { color: #b7e4c7; transform: scale(1.1); }
         
         .ai-btn { color: #f8ad03 !important; font-weight: 600; } 
-        .online-dot { width: 10px; height: 10px; background: #00ff00; border-radius: 50%; display: inline-block; border: 2px solid white; margin-left: 5px; }
     </style>
 </head>
 <body>
@@ -75,8 +69,40 @@
             <div class="welcome-text">
                 <h1>ไทยช่วยไทย</h1>
                 <p>พื้นที่แบ่งปันสินค้าและน้ำใจสำหรับคนไทย</p>
+                <div class="date-time-box" id="display-date-time">
+                    <i class="far fa-calendar-alt"></i> กำลังโหลดวันที่และเวลา...
+                </div>
             </div>
         </div>
 
         <div class="header-right">
-            <div class="clock-style">
+            <div class="member-corner">
+                <a href="#" class="btn-thai-style">เข้าสู่ระบบ</a>
+                <a href="#" class="btn-thai-style" style="background: #40916c;">สมัครสมาชิก</a>
+            </div>
+        </div>
+    </header>
+
+    <nav class="main-nav">
+        <div class="nav-container">
+            <a href="#" class="nav-item"><i class="fas fa-home"></i><span>หน้าแรก</span></a>
+            <a href="#" class="nav-item"><i class="fas fa-box"></i><span>สินค้า</span></a>
+            <a href="#" class="nav-item"><i class="fas fa-user-shield"></i><span>Admin</span></a>
+            <a href="#" class="nav-item ai-btn"><i class="fas fa-robot"></i><span>AI Assistant</span></a>
+            <a href="#" class="nav-item"><i class="fas fa-language"></i><span>Translate</span></a>
+            <a href="#" class="nav-item"><i class="fas fa-headset"></i><span>ลูกค้าสัมพันธ์</span></a>
+        </div>
+    </nav>
+
+    <script>
+        function updateDateTime() {
+            const now = new Date();
+            const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit', second: '2-digit' };
+            document.getElementById('display-date-time').innerHTML = '<i class="far fa-clock"></i> ' + now.toLocaleDateString('th-TH', options);
+        }
+        setInterval(updateDateTime, 1000);
+        updateDateTime();
+    </script>
+
+</body>
+</html>
