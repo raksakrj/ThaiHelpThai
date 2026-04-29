@@ -1,102 +1,96 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ไทยช่วยไทย | Thai Help Thai</title>
-    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    
-    <style>
-        body { margin: 0; padding: 0; font-family: 'Kanit', sans-serif; background-color: #f0f7f4; }
-        
-        /* แก้ไข Header ให้จัดวางสวยงาม */
-        .top-header {
-            background: linear-gradient(rgba(255,255,255,0.7), rgba(255,255,255,0.7)), 
-                        url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1500&q=80');
-            background-size: cover; background-position: center;
-            padding: 20px 40px; 
-            display: flex; 
-            justify-content: space-between; /* แยกซ้าย-ขวา */
-            align-items: center; 
-            border-bottom: 3px solid #52b788;
-        }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ไทยช่วยไทย | Thai Help Thai</title>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        body { margin: 0; padding: 0; font-family: 'Kanit', sans-serif; background-color: #f0f7f4; }
+        .top-header {
+            background: linear-gradient(rgba(255,255,255,0.2), rgba(255,255,255,0.2)), 
+                        url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1500&q=80');
+            background-size: cover; background-position: center;
+            padding: 20px 40px; display: flex; justify-content: space-between; align-items: flex-start; 
+            border-bottom: 3px solid #52b788;
+        }
+        .logo-img { width: 400px; height: auto; filter: drop-shadow(0 5px 10px rgba(0,0,0,0.1)); }
+        .welcome-text { margin-left: 20px; flex-grow: 1; }
+        .welcome-text h1 { font-size: 2.8rem; margin: 0; color: #2d6a4f; text-shadow: 1px 1px 2px white; }
+        .welcome-text p { font-size: 1.5rem; margin: 5px 0 15px 0; color: #333; }
+        .clock-style { background: rgba(255, 255, 255, 0.8); padding: 8px 20px; border-radius: 30px; display: inline-block; font-weight: 600; color: #2d6a4f; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+        .member-corner { display: flex; gap: 15px; margin-top: 15px; }
+        
+        .btn-thai-style { background: #1b4332 !important; color: white !important; border: none !important; padding: 12px 30px; border-radius: 50px; font-weight: 600; font-size: 1.1rem; cursor: pointer; transition: 0.3s; }
+        .btn-thai-style:hover { background: #2d6a4f !important; transform: translateY(-3px); }
 
-        .header-left { display: flex; align-items: center; }
-        .logo-img { width: 120px; height: auto; margin-right: 20px; filter: drop-shadow(0 5px 10px rgba(0,0,0,0.1)); }
-        
-        .welcome-text h1 { font-size: 2.2rem; margin: 0; color: #2d6a4f; }
-        .welcome-text p { font-size: 1.1rem; margin: 5px 0 0 0; color: #333; }
-
-        .header-right { text-align: right; }
-        .clock-style { 
-            background: rgba(45, 106, 79, 0.9); 
-            padding: 8px 20px; 
-            border-radius: 30px; 
-            display: inline-block; 
-            font-weight: 600; 
-            color: white; 
-            margin-bottom: 15px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1); 
-        }
-
-        .member-corner { display: flex; gap: 10px; justify-content: flex-end; }
-        .btn-thai-style { 
-            background: #1b4332; 
-            color: white; 
-            border: none; 
-            padding: 10px 20px; 
-            border-radius: 50px; 
-            font-weight: 600; 
-            cursor: pointer; 
-            transition: 0.3s; 
-        }
-        .btn-thai-style:hover { background: #2d6a4f; transform: translateY(-2px); }
-
-        /* แถบเมนูไอคอน 6 ปุ่ม */
-        .main-nav { background: #2d6a4f; padding: 12px 0; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
-        .nav-container { display: flex; justify-content: center; gap: 35px; flex-wrap: wrap; }
-        .nav-item { color: white; text-decoration: none; display: flex; flex-direction: column; align-items: center; gap: 5px; transition: 0.3s; }
-        .nav-item i { font-size: 1.6rem; }
-        .nav-item span { font-size: 0.85rem; }
-        .nav-item:hover { color: #b7e4c7; transform: scale(1.1); }
-        
-        .ai-btn { color: #f8ad03; font-weight: bold; } /* สีทองสำหรับ G */
-        .online-dot { width: 10px; height: 10px; background: #00ff00; border-radius: 50%; display: inline-block; border: 2px solid white; margin-left: 3px; }
-    </style>
+        /* ส่วนแถบเมนูไอคอน */
+        .main-nav { background: #2d6a4f; padding: 15px 0; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+        .nav-container { display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; }
+        .nav-item { color: white; text-decoration: none; display: flex; flex-direction: column; align-items: center; gap: 8px; transition: 0.3s; min-width: 80px; }
+        .nav-item i { font-size: 1.8rem; }
+        .nav-item span { font-size: 0.9rem; font-weight: 400; }
+        .nav-item:hover { color: #b7e4c7; transform: scale(1.1); }
+        .ai-btn { color: #f8ad03; } /* สีเหลืองทองสำหรับปุ่ม G */
+        .online-dot { width: 12px; height: 12px; background: #00ff00; border-radius: 50%; display: inline-block; border: 2px solid white; margin-left: 5px; }
+    </style>
 </head>
 <body>
 
-    <header class="top-header">
-        <div class="header-left">
-            <img src="logo.png" alt="ไทยช่วยไทย" class="logo-img">
-            <div class="welcome-text">
-                <h1>ไทยช่วยไทย</h1>
-                <p>พื้นที่แบ่งปันสินค้าและน้ำใจสำหรับคนไทย</p>
-            </div>
-        </div>
+    <header class="top-header">
+        <img src="logo.png" alt="ไทยช่วยไทย" class="logo-img">
+        <div class="welcome-text">
+            <h1>ยินดีต้อนรับสู่ ไทยช่วยไทย</h1>
+            <p>พื้นที่สำหรับคนไทย แบ่งปันสินค้าและน้ำใจให้กัน</p>
+            <div class="clock-style" id="clock">00:00:00</div>
+            <div class="member-corner">
+                <button class="btn-thai-style">เข้าสู่ระบบ</button>
+                <button class="btn-thai-style">สมัครสมาชิก</button>
+            </div>
+        </div>
+    </header>
 
-        <div class="header-right">
-            <div class="clock-style" id="clock">00:00:00</div>
-            <div class="member-corner">
-                <button class="btn-thai-style">เข้าสู่ระบบ</button>
-                <button class="btn-thai-style">สมัครสมาชิก</button>
-            </div>
-        </div>
-    </header>
+    <nav class="main-nav">
+        <div class="nav-container">
+            <a href="#" class="nav-item">
+                <i class="fas fa-home"></i>
+                <span>หน้าแรก</span>
+            </a>
+            <a href="#" class="nav-item">
+                <i class="fas fa-box-open"></i>
+                <span>สินค้า</span>
+            </a>
+            <a href="#" class="nav-item">
+                <i class="fas fa-user-shield"></i>
+                <span>ผู้ดูแล</span>
+            </a>
+            <a href="#" class="nav-item ai-btn">
+                <i class="fas fa-robot"></i>
+                <span>สอบถาม G</span>
+            </a>
+            <a href="#" class="nav-item">
+                <i class="fas fa-language"></i>
+                <span>แปลภาษา</span>
+            </a>
+            <a href="#" class="nav-item">
+                <i class="fas fa-headset"></i>
+                <span>ลูกค้าสัมพันธ์ <span class="online-dot"></span></span>
+            </a>
+        </div>
+    </nav>
 
-    <nav class="main-nav">
-        <div class="nav-container">
-            <a href="#" class="nav-item">
-                <i class="fas fa-home"></i>
-                <span>หน้าแรก</span>
-            </a>
-            <a href="#" class="nav-item">
-                <i class="fas fa-box-open"></i>
-                <span>สินค้า</span>
-            </a>
-            <a href="#" class="nav-item">
-                <i class="fas fa-user-shield"></i>
-                <span>ผู้ดูแล</span>
-            </a>
-            <a href="#" class="nav
+    <script>
+        function updateClock() {
+            const now = new Date();
+            const timeString = now.toLocaleTimeString('th-TH');
+            document.getElementById('clock').textContent = timeString;
+        }
+        setInterval(updateClock, 1000);
+        updateClock();
+    </script>
+
+</body>
+</html>
