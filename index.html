@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ไทยช่วยไทย | Thai Help Thai</title>
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
     <style>
@@ -26,18 +27,70 @@
         .btn-thai-style { background: #1b4332 !important; color: white !important; border: none !important; padding: 12px 30px; border-radius: 50px; font-weight: 600; font-size: 1.1rem; cursor: pointer; transition: 0.3s; }
         .btn-thai-style:hover { background: #2d6a4f !important; transform: translateY(-3px); }
 
-        /* 2. สไตล์สำหรับแถบเมนูไอคอน */
+        /* ส่วนแถบเมนูไอคอน */
         .main-nav { background: #2d6a4f; padding: 15px 0; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
         .nav-container { display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; }
         .nav-item { color: white; text-decoration: none; display: flex; flex-direction: column; align-items: center; gap: 8px; transition: 0.3s; min-width: 80px; }
         .nav-item i { font-size: 1.8rem; }
         .nav-item span { font-size: 0.9rem; font-weight: 400; }
         .nav-item:hover { color: #b7e4c7; transform: scale(1.1); }
-        .ai-btn { color: #f8ad03; } /* สีพิเศษสำหรับปุ่ม AI */
+        .ai-btn { color: #f8ad03; } /* สีเหลืองทองสำหรับปุ่ม G */
         .online-dot { width: 12px; height: 12px; background: #00ff00; border-radius: 50%; display: inline-block; border: 2px solid white; margin-left: 5px; }
     </style>
 </head>
 <body>
 
     <header class="top-header">
-        <img src="logo.png" alt="
+        <img src="logo.png" alt="ไทยช่วยไทย" class="logo-img">
+        <div class="welcome-text">
+            <h1>ยินดีต้อนรับสู่ ไทยช่วยไทย</h1>
+            <p>พื้นที่สำหรับคนไทย แบ่งปันสินค้าและน้ำใจให้กัน</p>
+            <div class="clock-style" id="clock">00:00:00</div>
+            <div class="member-corner">
+                <button class="btn-thai-style">เข้าสู่ระบบ</button>
+                <button class="btn-thai-style">สมัครสมาชิก</button>
+            </div>
+        </div>
+    </header>
+
+    <nav class="main-nav">
+        <div class="nav-container">
+            <a href="#" class="nav-item">
+                <i class="fas fa-home"></i>
+                <span>หน้าแรก</span>
+            </a>
+            <a href="#" class="nav-item">
+                <i class="fas fa-box-open"></i>
+                <span>สินค้า</span>
+            </a>
+            <a href="#" class="nav-item">
+                <i class="fas fa-user-shield"></i>
+                <span>ผู้ดูแล</span>
+            </a>
+            <a href="#" class="nav-item ai-btn">
+                <i class="fas fa-robot"></i>
+                <span>สอบถาม G</span>
+            </a>
+            <a href="#" class="nav-item">
+                <i class="fas fa-language"></i>
+                <span>แปลภาษา</span>
+            </a>
+            <a href="#" class="nav-item">
+                <i class="fas fa-headset"></i>
+                <span>ลูกค้าสัมพันธ์ <span class="online-dot"></span></span>
+            </a>
+        </div>
+    </nav>
+
+    <script>
+        function updateClock() {
+            const now = new Date();
+            const timeString = now.toLocaleTimeString('th-TH');
+            document.getElementById('clock').textContent = timeString;
+        }
+        setInterval(updateClock, 1000);
+        updateClock();
+    </script>
+
+</body>
+</html>
