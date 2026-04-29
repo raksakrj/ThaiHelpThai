@@ -32,8 +32,22 @@
             filter: drop-shadow(0 5px 10px rgba(0,0,0,0.1)); 
         }
         
-        .welcome-text h1 { font-size: 3.5rem; margin: 0; color: #2d6a4f; }
-        .welcome-text p { font-size: 1.8rem; margin: 5px 0; color: #333; }
+        /* ปรับแต่ง: เพิ่มเงาขอบขาวให้ชื่อโดดเด่น */
+        .welcome-text h1 { 
+            font-size: 3.5rem; 
+            margin: 0; 
+            color: #2d6a4f; 
+            text-shadow: 2px 2px 0px #fff, -2px -2px 0px #fff, 2px -2px 0px #fff, -2px 2px 0px #fff, 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        /* ปรับแต่ง: ขยายคำอธิบายให้ใหญ่และเข้มโดดเด่น */
+        .welcome-text p { 
+            font-size: 1.8rem; 
+            margin: 5px 0; 
+            color: #1b4332; 
+            font-weight: 600; 
+            letter-spacing: 0.5px;
+        }
 
         .date-time-box { font-size: 1rem; color: #1b4332; font-weight: 500; margin-top: 5px; }
 
