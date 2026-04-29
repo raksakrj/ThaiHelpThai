@@ -20,15 +20,13 @@
             justify-content: space-between; 
             align-items: center; 
             border-bottom: 3px solid #52b788;
-            flex-wrap: wrap; /* เพิ่มเพื่อให้รองรับโลโก้ขนาดใหญ่มาก */
+            flex-wrap: wrap; 
         }
 
         .header-left { display: flex; align-items: center; flex: 1; }
         
-        
-        /* ปรับโลโก้ให้ใหญ่ 800px ตามที่รักษ์ต้องการ และสั่งไม่ให้โดนบีบ (flex-shrink: 0) */
         .logo-img { 
-            width: 400px !important; 
+            width: 300px !important; 
             height: auto; 
             margin-right: 25px; 
             flex-shrink: 0; 
@@ -65,7 +63,7 @@
         .nav-item span { font-size: 0.95rem; font-weight: 400; }
         .nav-item:hover { color: #b7e4c7; transform: scale(1.1); }
         
-        .ai-btn { color: #f8ad03 !important; font-weight: 600; } 
+        .ai-btn { color: #f8ad03 !important; font-weight: 600; }  
     </style>
 </head>
 <body>
@@ -84,8 +82,8 @@
 
         <div class="header-right">
             <div class="member-corner">
-                <a href="#" class="btn-thai-style">เข้าสู่ระบบ</a>
-                <a href="#" class="btn-thai-style" style="background: #40916c;">สมัครสมาชิก</a>
+                <a href="save_data.html" class="btn-thai-style">เข้าสู่ระบบ</a>
+                <a href="save_data.html" class="btn-thai-style" style="background: #40916c;">สมัครสมาชิก</a>
             </div>
         </div>
     </header>
