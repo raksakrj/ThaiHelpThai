@@ -6,99 +6,132 @@
     <title>ไทยช่วยไทย | Thai Help Thai</title>
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
-        :root { --primary-green: #4CAF50; --warm-brown: #8D6E63; --light-bg: #F9FBE7; --text-dark: #37474F; }
-        body { font-family: 'Kanit', sans-serif; margin: 0; padding: 0; background-color: var(--light-bg); color: var(--text-dark); }
-        
-        /* ปรับส่วนหัวให้โลโก้กับตัวหนังสืออยู่บรรทัดเดียวกัน */
+        :root { 
+            --primary-green: #2d6a4f; 
+            --soft-green: #52b788;
+            --warm-cream: #f8f9fa;
+        }
+
+        body { 
+            font-family: 'Kanit', sans-serif; 
+            margin: 0; 
+            padding: 0; 
+            background-color: var(--warm-cream); 
+        }
+
+        /* จัดโลโก้และชื่อให้อยู่ตรงกลางและบรรทัดเดียวกัน */
         header { 
             background-color: white; 
-            padding: 15px 0; 
-            text-align: center; 
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            padding: 40px 0; 
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 20px; /* ระยะห่างระหว่างรูปกับตัวหนังสือ */
+            gap: 30px; 
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
         }
-        
-        /* ขยายโลโก้ขึ้นอีก 50% (จากเดิม 200px เป็น 300px) */
-        .logo-container img { 
-            max-width: 500px; 
+
+        /* ขยายโลโก้ขึ้น 1 เท่าตัว (ประมาณ 600px ตามสั่งครับ) */
+        .logo-img { 
+            width: 600px; 
             height: auto; 
-            vertical-align: middle;
         }
 
         .header-title {
-            font-size: 2.2rem;
+            font-size: 5rem; 
             color: var(--primary-green);
-            font-weight: 600;
             margin: 0;
         }
-        
-        .hero { padding: 60px 20px; text-align: center; background: linear-gradient(rgba(255,255,255,0.7), rgba(255,255,255,0.7)), url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1350&q=80'); background-size: cover; background-position: center; }
-        .hero h1 { color: var(--primary-green); font-size: 2.8rem; margin-bottom: 10px; }
-        
-        .btn-register { background-color: #FF9800; color: white; padding: 15px 30px; font-size: 1.2rem; border: none; border-radius: 50px; cursor: pointer; transition: 0.3s; margin-top: 20px; box-shadow: 0 4px 15px rgba(255,152,0,0.3); }
-        .btn-register:hover { background-color: #F57C00; transform: scale(1.05); }
 
-        .shop-section { padding: 40px 20px; max-width: 1200px; margin: 0 auto; }
-        .shop-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 25px; }
-        .shop-card { background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
-        .shop-info { padding: 20px; }
-        .btn-visit { display: block; text-align: center; background-color: var(--primary-green); color: white; padding: 10px; text-decoration: none; border-radius: 8px; }
+        /* พื้นหลังวิวธรรมชาติไอหมอก นุ่มนวล ไม่แสบตา */
+        .hero { 
+            padding: 120px 20px; 
+            text-align: center; 
+            background: linear-gradient(rgba(255,255,255,0.6), rgba(255,255,255,0.6)), 
+                        url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1500&q=80'); 
+            background-size: cover; 
+            background-position: center;
+            background-attachment: fixed;
+        }
 
-        .modal { display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.5); }
-        .modal-content { background-color: white; margin: 5% auto; padding: 30px; border-radius: 20px; width: 80%; max-width: 600px; max-height: 80vh; overflow-y: auto; }
-        .terms-text { text-align: left; line-height: 1.6; font-size: 0.95rem; background: #fdfdfd; padding: 15px; border: 1px solid #eee; }
+        .slogan-container {
+            background: rgba(255,255,255,0.7);
+            padding: 30px;
+            border-radius: 25px;
+            display: inline-block;
+            backdrop-filter: blur(5px);
+        }
+
+        .hero h2 { font-size: 3rem; color: var(--primary-green); margin: 0; }
+        .hero p { font-size: 2rem; color: #444; margin: 10px 0 0 0; }
+
+        .btn-register { 
+            background-color: #d97706; 
+            color: white; 
+            padding: 20px 50px; 
+            font-size: 1.8rem; 
+            border: none; 
+            border-radius: 60px; 
+            cursor: pointer; 
+            margin-top: 40px; 
+            box-shadow: 0 10px 20px rgba(217,119,6,0.3);
+            transition: 0.3s;
+        }
+        .btn-register:hover { transform: scale(1.05); background-color: #b45309; }
+
+        /* ส่วนแสดงร้านค้า */
+        .shop-section { padding: 60px 20px; max-width: 1200px; margin: 0 auto; text-align: center; }
+        .shop-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); gap: 40px; margin-top: 40px; }
+        .shop-card { background: white; border-radius: 30px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
+        .shop-info { padding: 30px; }
+        .btn-visit { display: block; background-color: var(--primary-green); color: white; padding: 15px; text-decoration: none; border-radius: 15px; font-weight: 600; }
+
+        /* หน้าต่างเงื่อนไข */
+        .modal { display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); }
+        .modal-content { background: white; margin: 10% auto; padding: 40px; border-radius: 30px; width: 80%; max-width: 700px; }
     </style>
 </head>
 <body>
 
     <header>
-        <div class="logo-container">
-            <img src="logo.png" alt="โลโก้ไทยช่วยไทย" onerror="this.src='https://via.placeholder.com/300x150?text=Logo'">
-        </div>
+        <img src="logo.png" alt="ไทยช่วยไทย" class="logo-img" onerror="this.src='https://via.placeholder.com/600x300?text=LOGO'">
         <h1 class="header-title">ไทยช่วยไทย</h1>
     </header>
 
     <section class="hero">
-        <h1>ยินดีต้อนรับสู่ ไทยช่วยไทย</h1>
-        <p>จากมือผู้ผลิต สู่ใจผู้บริโภค โดยไม่ผ่านคนกลาง</p>
+        <div class="slogan-container">
+            <h2>จากมือผู้ผลิต สู่ใจผู้บริโภค</h2>
+            <p>โดยไม่ผ่านคนกลาง</p>
+        </div>
+        <br>
         <button class="btn-register" onclick="document.getElementById('termsModal').style.display='block'">สมัครเป็นสมาชิกชุมชน</button>
     </section>
 
     <div id="termsModal" class="modal">
         <div class="modal-content">
-            <h2>วัตถุประสงค์และเงื่อนไขสมาชิก</h2>
-            <div class="terms-text">
-                <p><b>วัตถุประสงค์:</b> เพื่อสร้างช่องทางการตลาดที่เป็นธรรมให้เกษตรกรและช่างฝีมือ โดยไม่ผ่านระบบนายหน้า</p>
-                <hr>
-                <p>1. ผู้สมัครต้องเป็นเจ้าของผลผลิตจริง ไม่ใช่ตัวแทนจำหน่ายหรือคนกลาง</p>
-                <p>2. รูปภาพและข้อมูลต้องเป็นความจริง และถ่ายจากสถานที่จริงของสมาชิก</p>
-                <p>3. สมาชิกต้องรับผิดชอบต่อคุณภาพสินค้าที่ส่งมอบให้ผู้บริโภค</p>
-                <p>4. ยินยอมปฏิบัติตามกฎหมายและ พ.ร.บ. คุ้มครองข้อมูลส่วนบุคคล (PDPA)</p>
+            <h2 style="color:var(--primary-green);">เงื่อนไขการเข้าร่วมโครงการ</h2>
+            <div style="text-align:left; background:#f9f9f9; padding:20px; border-radius:15px; margin-bottom:20px;">
+                <p>1. ต้องเป็นเจ้าของสวนหรือผู้ผลิตจริงเท่านั้น</p>
+                <p>2. ข้อมูลและรูปภาพต้องเป็นความจริง</p>
+                <p>3. ยินยอมปฏิบัติตามกฎระเบียบของชุมชน</p>
             </div>
-            <p><input type="checkbox" id="accept"> ข้าพเจ้ายอมรับเงื่อนไขและวัตถุประสงค์ของโครงการ</p>
-            <button class="btn-visit" onclick="checkTerms()" style="width:100%; border:none; cursor:pointer;">ยืนยันและสมัครสมาชิก</button>
-            <button onclick="document.getElementById('termsModal').style.display='none'" style="margin-top:10px; background:none; border:none; color:gray; cursor:pointer;">ยกเลิก</button>
+            <label style="font-size:1.3rem;"><input type="checkbox" id="accept"> ข้าพเจ้ายอมรับเงื่อนไข</label>
+            <button class="btn-visit" onclick="alert('ยินดีต้อนรับครับ!'); document.getElementById('termsModal').style.display='none';" style="width:100%; border:none; margin-top:20px; cursor:pointer;">ยืนยันการสมัคร</button>
         </div>
     </div>
 
     <main class="shop-section">
-        <center><h2 style="border-bottom: 2px solid var(--primary-green); display: inline-block;">ร้านค้าสมาชิกเด่นวันนี้</h2></center>
+        <h2 style="font-size:2.5rem; color:var(--primary-green); border-bottom:3px solid var(--soft-green); display:inline-block;">ร้านค้าสมาชิกเด่นวันนี้</h2>
         <div class="shop-grid">
             <div class="shop-card">
-                <img src="https://images.unsplash.com/photo-1590005354167-6da97870c91d?auto=format&fit=crop&w=500&q=60" class="shop-image" style="width:100%; height:200px; object-fit:cover;">
+                <img src="https://images.unsplash.com/photo-1590005354167-6da97870c91d?auto=format&fit=crop&w=500&q=60" style="width:100%; height:250px; object-fit:cover;">
                 <div class="shop-info">
                     <h3>สวนลุงสนั่น (ทุเรียนหมอนทอง)</h3>
-                    <p>ทุเรียนคุณภาพจากจันทบุรี ปลูกด้วยใจปลอดภัยสารพิษ</p>
-                    <a href="#" class="btn-visit">เข้าชมสวนนี้</a>
+                    <p>ผลผลิตพรีเมียม ส่งตรงจากสวนจันทบุรี</p>
+                    <a href="#" class="btn-visit">เข้าชมสวนลุงสนั่น</a>
                 </div>
             </div>
         </div>
     </main>
 
-    <script>
-        function checkTerms() {
-            if(document.getElementById('accept').checked) {
-                alert('ยินดีต้อนรับสู่ครอบครัวไทยช่วยไทย! ขั้นตอนถัดไปกรุณากรอกรายละเอียดสวนของคุณ
+</body>
+</html>
