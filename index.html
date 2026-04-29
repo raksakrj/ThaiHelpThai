@@ -10,29 +10,27 @@
             margin: 0;
             padding: 0;
             font-family: 'Kanit', sans-serif;
-            background-color: #f8f9fa;
         }
 
         /* ส่วนหัวที่รวมพื้นหลังโลโก้และตัวหนังสือ */
         .top-header {
-            /* ใส่รูปพื้นหลังวิวธรรมชาติที่ซอฟต์ตา */
             background: linear-gradient(rgba(255,255,255,0.4), rgba(255,255,255,0.4)), 
                         url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1500&q=80');
             background-size: cover;
             background-position: center;
             padding: 40px 20px;
             display: flex;
-            align-items: center; /* จัดให้โลโก้กับตัวหนังสืออยู่กึ่งกลางแนวตั้งร่วมกัน */
-            justify-content: flex-start; /* วางทุกอย่างเริ่มจากซ้ายมือ */
-            gap: 40px; /* ระยะห่างระหว่างโลโก้กับข้อความ */
-            min-height: 400px; /* ความสูงขั้นต่ำเพื่อให้เห็นภาพพื้นหลังสวยๆ */
+            align-items: center; 
+            justify-content: flex-start; 
+            gap: 30px; 
+            min-height: 450px;
         }
 
-        /* ปรับขนาดโลโก้ 800px ตามสั่ง */
+        /* ปรับขนาดโลโก้ 800px ตามสั่ง และดึงไฟล์ logo.png */
         .logo-img {
             width: 800px;
             height: auto;
-            filter: drop-shadow(0 10px 20px rgba(0,0,0,0.15));
+            display: block;
         }
 
         /* ส่วนข้อความที่ต่อจากโลโก้ */
@@ -42,37 +40,23 @@
         }
 
         .welcome-text h1 {
-            font-size: 3.5rem;
+            font-size: 3rem;
             margin: 0;
             color: #2d6a4f;
         }
 
         .welcome-text p {
-            font-size: 1.8rem;
+            font-size: 1.6rem;
             margin: 10px 0 0 0;
             color: #444;
             line-height: 1.4;
-        }
-
-        /* ปรับแต่งสำหรับมือถือให้แสดงผลได้ */
-        @media (max-width: 1200px) {
-            .top-header {
-                flex-direction: column;
-                text-align: center;
-            }
-            .logo-img {
-                width: 90%;
-            }
-            .welcome-text {
-                text-align: center;
-            }
         }
     </style>
 </head>
 <body>
 
     <header class="top-header">
-        <img src="logo.png" alt="โลโก้ไทยช่วยไทย" class="logo-img" onerror="this.src='https://via.placeholder.com/800x400?text=LOGO+800px'">
+        <img src="logo.png" alt="โลโก้ไทยช่วยไทย" class="logo-img">
         
         <div class="welcome-text">
             <h1>ยินดีต้อนรับสู่ไทยช่วยไทย</h1>
