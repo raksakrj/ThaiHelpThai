@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <title>เข้าสู่ระบบ | ไทยช่วยไทย</title>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Kanit', sans-serif; background-color: #f0f7f4; display: flex; justify-content: center; align-items: center; min-height: 100vh; margin: 0; }
+        .login-card { background: white; padding: 40px; border-radius: 20px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); width: 350px; text-align: center; }
+        h2 { color: #1b4332; margin-bottom: 30px; }
+        .form-group { text-align: left; margin-bottom: 20px; }
+        label { display: block; margin-bottom: 5px; font-weight: 600; color: #1b4332; }
+        input { width: 100%; padding: 12px; border-radius: 10px; border: 1px solid #ccc; box-sizing: border-box; font-family: 'Kanit'; }
+        .btn-login { background: #1b4332; color: white; border: none; width: 100%; padding: 15px; border-radius: 50px; cursor: pointer; font-weight: 600; font-size: 1.1rem; margin-top: 10px; }
+    </style>
+</head>
+<body>
+<div class="login-card">
+    <h2>เข้าสู่ระบบ</h2>
+    <form>
+        <div class="form-group">
+            <label>อีเมล</label>
+            <input type="email" placeholder="กรอกอีเมลของคุณ" required>
+        </div>
+        <div class="form-group">
+            <label>รหัสผ่าน</label>
+            <input type="password" placeholder="กรอกรหัสผ่าน" required>
+        </div>
+        <button type="button" class="btn-login" onclick="alert('ระบบกำลังตรวจสอบข้อมูลครับคุณรักษ์')">เข้าสู่ระบบ</button>
+    </form>
+    <br>
+    <a href="#" style="color: #666; text-decoration: none; font-size: 0.8rem;" onclick="alert('ระบบกู้คืนรหัสผ่านด้วย OTP กำลังถูกสร้างครับ')">ลืมรหัสผ่าน?</a>
+    <hr style="margin: 20px 0; border: 0; border-top: 1px solid #eee;">
+    <a href="index.html" style="color: #2d6a4f; text-decoration: none; font-size: 0.9rem;">← กลับหน้าหลัก</a>
+</div>
+</body>
+</html>
