@@ -5,71 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ไทยช่วยไทย | Thai Help Thai</title>
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
     <style>
         body { margin: 0; padding: 0; font-family: 'Kanit', sans-serif; background-color: #f0f7f4; }
         .top-header {
             background: linear-gradient(rgba(255,255,255,0.2), rgba(255,255,255,0.2)), 
                         url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1500&q=80');
-            background-size: cover;
-            background-position: center;
-            padding: 20px 40px;
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start; 
+            background-size: cover; background-position: center;
+            padding: 20px 40px; display: flex; justify-content: space-between; align-items: flex-start; 
             border-bottom: 3px solid #52b788;
         }
         .logo-img { width: 400px; height: auto; filter: drop-shadow(0 5px 10px rgba(0,0,0,0.1)); }
         .welcome-text { margin-left: 20px; flex-grow: 1; }
         .welcome-text h1 { font-size: 2.8rem; margin: 0; color: #2d6a4f; text-shadow: 1px 1px 2px white; }
         .welcome-text p { font-size: 1.5rem; margin: 5px 0 15px 0; color: #333; }
-        .clock-style {
-            background: rgba(255, 255, 255, 0.8);
-            padding: 8px 20px;
-            border-radius: 30px;
-            display: inline-block;
-            font-weight: 600;
-            color: #2d6a4f;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-        }
+        .clock-style { background: rgba(255, 255, 255, 0.8); padding: 8px 20px; border-radius: 30px; display: inline-block; font-weight: 600; color: #2d6a4f; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
         .member-corner { display: flex; gap: 15px; margin-top: 15px; }
         
-        /* ปุ่มสีเขียวทึบคู่ */
-        .btn-thai-style {
-            background: #1b4332 !important;
-            color: white !important;
-            border: none !important;
-            padding: 12px 30px;
-            border-radius: 50px;
-            font-weight: 600;
-            font-size: 1.1rem;
-            font-family: 'Kanit';
-            cursor: pointer;
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
-            transition: 0.3s;
-        }
+        .btn-thai-style { background: #1b4332 !important; color: white !important; border: none !important; padding: 12px 30px; border-radius: 50px; font-weight: 600; font-size: 1.1rem; cursor: pointer; transition: 0.3s; }
         .btn-thai-style:hover { background: #2d6a4f !important; transform: translateY(-3px); }
+
+        /* 2. สไตล์สำหรับแถบเมนูไอคอน */
+        .main-nav { background: #2d6a4f; padding: 15px 0; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+        .nav-container { display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; }
+        .nav-item { color: white; text-decoration: none; display: flex; flex-direction: column; align-items: center; gap: 8px; transition: 0.3s; min-width: 80px; }
+        .nav-item i { font-size: 1.8rem; }
+        .nav-item span { font-size: 0.9rem; font-weight: 400; }
+        .nav-item:hover { color: #b7e4c7; transform: scale(1.1); }
+        .ai-btn { color: #f8ad03; } /* สีพิเศษสำหรับปุ่ม AI */
+        .online-dot { width: 12px; height: 12px; background: #00ff00; border-radius: 50%; display: inline-block; border: 2px solid white; margin-left: 5px; }
     </style>
 </head>
 <body>
 
     <header class="top-header">
-        <img src="logo.png" alt="โลโก้ไทยช่วยไทย" class="logo-img">
-        
-        <div class="welcome-text">
-            <h1>ยินดีต้อนรับสู่ไทยช่วยไทย</h1>
-            <p>จากมือผู้ผลิต สู่ใจผู้บริโภค โดยไม่ผ่านคนกลาง</p>
-            <div id="live-clock" class="clock-style">
-                <span id="date"></span> | <span id="time"></span>
-            </div>
-        </div>
-
-        <div class="member-corner">
-            <button class="btn-thai-style" onclick="location.href='login.html'">เข้าสู่ระบบ</button>
-            <button class="btn-thai-style" onclick="location.href='register.html'">สมัครสมาชิก</button>
-        </div>
-    </header>
-
-    <script src="script.js"></script>
-</body>
-</html>
+        <img src="logo.png" alt="
