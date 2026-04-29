@@ -10,23 +10,23 @@
     <style>
         body { margin: 0; padding: 0; font-family: 'Kanit', sans-serif; background-color: #f0f7f4; }
         
-        /* แก้ไข Header ให้จัดวางสวยงาม */
+        /* Header ส่วนบน - ล็อกตำแหน่งซ้ายขวาให้คงที่ */
         .top-header {
-            background: linear-gradient(rgba(255,255,255,0.7), rgba(255,255,255,0.7)), 
+            background: linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8)), 
                         url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1500&q=80');
             background-size: cover; background-position: center;
             padding: 20px 40px; 
             display: flex; 
-            justify-content: space-between; /* แยกซ้าย-ขวา */
+            justify-content: space-between; 
             align-items: center; 
             border-bottom: 3px solid #52b788;
         }
 
         .header-left { display: flex; align-items: center; }
-        .logo-img { width: 120px; height: auto; margin-right: 20px; filter: drop-shadow(0 5px 10px rgba(0,0,0,0.1)); }
+        .logo-img { width: 80px; height: auto; margin-right: 20px; filter: drop-shadow(0 5px 10px rgba(0,0,0,0.1)); }
         
-        .welcome-text h1 { font-size: 2.2rem; margin: 0; color: #2d6a4f; }
-        .welcome-text p { font-size: 1.1rem; margin: 5px 0 0 0; color: #333; }
+        .welcome-text h1 { font-size: 2rem; margin: 0; color: #2d6a4f; }
+        .welcome-text p { font-size: 1rem; margin: 5px 0 0 0; color: #333; }
 
         .header-right { text-align: right; }
         .clock-style { 
@@ -36,8 +36,9 @@
             display: inline-block; 
             font-weight: 600; 
             color: white; 
-            margin-bottom: 15px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1); 
+            margin-bottom: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            font-size: 1.1rem;
         }
 
         .member-corner { display: flex; gap: 10px; justify-content: flex-end; }
@@ -45,24 +46,25 @@
             background: #1b4332; 
             color: white; 
             border: none; 
-            padding: 10px 20px; 
+            padding: 8px 18px; 
             border-radius: 50px; 
             font-weight: 600; 
             cursor: pointer; 
-            transition: 0.3s; 
+            transition: 0.3s;
+            font-size: 0.9rem;
         }
         .btn-thai-style:hover { background: #2d6a4f; transform: translateY(-2px); }
 
-        /* แถบเมนูไอคอน 6 ปุ่ม */
-        .main-nav { background: #2d6a4f; padding: 12px 0; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
-        .nav-container { display: flex; justify-content: center; gap: 35px; flex-wrap: wrap; }
-        .nav-item { color: white; text-decoration: none; display: flex; flex-direction: column; align-items: center; gap: 5px; transition: 0.3s; }
-        .nav-item i { font-size: 1.6rem; }
-        .nav-item span { font-size: 0.85rem; }
+        /* แถบเมนูไอคอน 6 ปุ่ม - จัดวางให้สมดุลและไม่เล็กเกินไป */
+        .main-nav { background: #2d6a4f; padding: 15px 0; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+        .nav-container { display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; }
+        .nav-item { color: white; text-decoration: none; display: flex; flex-direction: column; align-items: center; gap: 8px; transition: 0.3s; }
+        .nav-item i { font-size: 1.8rem; } /* ปรับไอคอนให้ใหญ่ขึ้น */
+        .nav-item span { font-size: 0.95rem; font-weight: 400; }
         .nav-item:hover { color: #b7e4c7; transform: scale(1.1); }
         
-        .ai-btn { color: #f8ad03; font-weight: bold; } /* สีทองสำหรับ G */
-        .online-dot { width: 10px; height: 10px; background: #00ff00; border-radius: 50%; display: inline-block; border: 2px solid white; margin-left: 3px; }
+        .ai-btn { color: #f8ad03 !important; font-weight: 600; } 
+        .online-dot { width: 10px; height: 10px; background: #00ff00; border-radius: 50%; display: inline-block; border: 2px solid white; margin-left: 5px; }
     </style>
 </head>
 <body>
@@ -92,12 +94,12 @@
                 <span>หน้าแรก</span>
             </a>
             <a href="#" class="nav-item">
-                <i class="fas fa-box-open"></i>
+                <i class="fas fa-shopping-basket"></i>
                 <span>สินค้า</span>
             </a>
             <a href="#" class="nav-item">
-                <i class="fas fa-user-shield"></i>
-                <span>ผู้ดูแล</span>
+                <i class="fas fa-user-cog"></i>
+                <span>ผู้ดูแลระบบ</span>
             </a>
             <a href="#" class="nav-item ai-btn">
                 <i class="fas fa-robot"></i>
@@ -108,7 +110,7 @@
                 <span>แปลภาษา</span>
             </a>
             <a href="#" class="nav-item">
-                <i class="fas fa-headset"></i>
+                <i class="fas fa-comments"></i>
                 <span>ลูกค้าสัมพันธ์ <span class="online-dot"></span></span>
             </a>
         </div>
